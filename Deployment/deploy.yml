@@ -1,0 +1,12 @@
+---
+- name: Pull Docker Image of Calculator
+  hosts: localhost
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: bsankapal/calculator:latest
+        source: pull
+    - name: Running container
+      shell: docker create -it -d --name Calculator bsankapal/calculator
