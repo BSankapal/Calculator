@@ -2,7 +2,7 @@
 - name: Pull Docker Image of Calculator
   hosts: localhost
   vars:
-    ansible_python_interpreter: /usr/local/bin/python3
+    ansible_python_interpreter: /opt/homebrew/share/man/man1/python3.1
   tasks:
     - name: Pull image
       docker_image:
