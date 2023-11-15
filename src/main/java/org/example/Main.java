@@ -7,18 +7,17 @@ import java.util.Scanner;
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
-        logger.info("Start of Execution");
+        logger.info("Working of Calculator Started.....");
 
         Scanner myObj = new Scanner(System.in);
         while(true) {
-            System.out.println("***** Welcome to My Calculator *****");
-            System.out.println("Choices of operations: ");
+            System.out.println("Choose the operation to be done:");
 
-            System.out.println("1. Addition");
-            System.out.println("2. Subtraction");
-            System.out.println("3. Multiplication");
-            System.out.println("4. Division");
-            System.out.println("5. Exit from calculator");
+            System.out.println("Add - Press 1");
+            System.out.println("Minus - Press 2");
+            System.out.println("Multiply - Press 3");
+            System.out.println("Divide - Press 4");
+            System.out.println("Stop - Press 5");
 
             int choice = myObj.nextInt();
 
@@ -53,37 +52,37 @@ public class Main {
         }
 
     }
-    public static int add(int x, int y)
+    public static int add(int num1, int num2)
     {
-        logger.info("START OP: Add");
-        int r = x+y;
-        logger.info("END OP: Add");
-        return r;
+        logger.info("Addition Operation Started");
+        int res = num1+num2;
+        logger.info("Addition Operation Ended");
+        return res;
     }
-    public static int sub(int x, int y)
+    public static int sub(int num1, int num2)
     {
-        logger.info("START OP: Subtract");
-        int r = x-y;
-        logger.info("END OP: Subtract");
-        return r;
+        logger.info("Subtract Operation Started");
+        int res = num1-num2;
+        logger.info("Subtract Operation Ended");
+        return res;
     }
-    public static int mul(int x, int y) {
-        logger.info("START OP: Multiply");
-        int r = x*y;
-        logger.info("END OP: Multiply");
-        return r;
+    public static int mul(int num1, int num2) {
+        logger.info("Multiply Operation Started");
+        int res = num1*num2;
+        logger.info("Multiply Operation Ended");
+        return res;
     }
-    public static int div(int x, int y)
+    public static int div(int num1, int num2)
     {
-        logger.info("START OP: Divide");
-        if(y==0){
-            logger.warn("Invalid Input, Division by zero!");
+        logger.info("Divide Operation Started");
+        if(num2==0){
+            logger.warn("Division by Zero!!");
         }
         else
         {
-            int r = x/y;
-            logger.info("END OP: Divide");
-            return r;
+            int res = num1/num2;
+            logger.info("Divide Operation Ended");
+            return res;
         }
         return 0;
     }
